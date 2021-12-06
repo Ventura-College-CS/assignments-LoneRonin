@@ -46,5 +46,18 @@ int main(){
 };
 
 void findStudent(ifstream &ifs, int IdNum) {
+    Student s;
     
+    //need to make case for not found id
+    if(IdNum == s.id) {
+        
+        s.sum = s.score[0] + s.score[1];
+        s.avg = s.sum / 2.0;
+		cout << "ID: " <<s.id
+		    << "\nName: " << s.StuName
+		    << "\nScore 1: " << s.score[0]
+		    << "\nscore 2: " <<s.score[1]
+		    << "\nSum  : " << s.sum
+		    << "\nAvg  : " << s.avg << endl;
+    }
 }
