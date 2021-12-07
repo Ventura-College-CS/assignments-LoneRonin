@@ -1,6 +1,6 @@
 /*
-Fill in the student recordsd by reading the text file
-Sort all student records by ascending order ofg the students name
+Fill in the student records by reading the text file
+Sort all student records by ascending order of the students name
 Sort all students records by aascending order of the scores summmation
 */
 
