@@ -29,7 +29,7 @@ int main(){
 
     for (int i=0; i<100; i++) {
         target = array[rand() % N];
-        total_linear += linearSearch(array, N, target) ;
+        total_linear += linearSearch(array, N, target);
     }
     cout << "The average comparision numbers of Linear Search is " << total_linear / 100.0 << endl;
 
@@ -38,7 +38,7 @@ int main(){
 
     for(int i=0; i<100; i++) {
         target = array[rand() % N];
-        total_binary += binarySearch(array, N, target) ;
+        total_binary += binarySearch(array, N, target);
     }
     cout << "The average comparision numbers of Binary Search is " << total_binary / 100.0 << endl;
 }
@@ -48,10 +48,34 @@ void makeArray(int array[], int N) {
         array[i] = rand() % 100 + 1;
 }; 
 int linearSearch(int array[], int N, int target) {
-    
+    int count;
+
+    for(int i=0; i<N; i++) {
+        count++;
+        if (target == array[i])
+            break;
+    }
+    return target;
 }; 
 int binarySearch(int array[], int N, int target) {
+    int first, mid, last, count;
 
+    first = 0;
+    last = N-1;
+
+    while (first <= last) {
+        count++;
+        mid = (first + last)/2;
+        if (array[mid] == target) {
+            return count;
+            break;
+        }
+        if (array[mid] < target)
+            last = mid-1;
+        else
+            first = mid+1;
+    }
+    return count;
 }; 
 void sortArray(int array[], int N) {
     int min, index;
