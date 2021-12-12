@@ -10,13 +10,29 @@ class Student {
     private:
         int SID;
         string Sname;
-        double scores;
+        vector<double> scores;
     public:
         Student() : SID(0), Sname() {}
-        Student(int i, string name, double *sc);
-        int getID();
-        string getName();
-        double *getScores();
+        Student(int i, string name, double *sc) {
+            SID = i;
+            Sname = name;
+            for(int j = 0; j<5; j++) {
+                scores.push_back(j); //come back to this to figure out how to have all 5
+                                     //Sstudent Objectyss be pushed
+            }
+        }
+        int getID() {
+            return SID;
+        }
+        string getName() {
+            return Sname;
+        }
+        vector<double> &getScores() {
+            return scores;
+        };
+        void setID();
+        void setName();
+        void setScores();
 };
 
 template <class T, int capacity = 30>
