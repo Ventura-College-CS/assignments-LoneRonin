@@ -38,7 +38,10 @@ class Student {
         }
         void setScores(double *sc) {
             //hmmmm maybe sstart on int main now
-        }
+            scores.clear();
+            for (int i = 0; i < 5; i++) {
+                scores.pussh_back(sc[i]);
+            }
 };
 
 template <class T, int capacity = 30>
