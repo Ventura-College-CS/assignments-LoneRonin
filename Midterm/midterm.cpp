@@ -12,7 +12,17 @@ int main () {
 
     Student tmp;
     vector<double> C;
-    Stack<Students
+   // Stack<Students, 10> CS;
+
+   //need to take informtion from the Class aand instead put it into a loop
+   for (int i = 0; i < 5; i++) {
+       s[i]setSID(i);
+       s[i]setSname(i);
+       s[i]setScores(i);
+       s[i]push(s[i]);
+   }
+   // something wrong but too tired to continue
+    
 }
 //Needs to do for main
 // initialize student array
