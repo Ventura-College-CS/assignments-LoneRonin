@@ -19,15 +19,31 @@ class Student {
         double *getScores();
 };
 
-template <class T>
+template <class T, int capacity = 30>
 class Stack {
-    Stack();
-
-    void push(el: const T &);
-    T pop();
-    T &topEl();
-    bool isEmpty();
-    int size();
+    private:
+        vector<T> S;
+    public:
+        Stack() {
+            S.reserve(capacity);
+        }
+        Stack(int size) {
+            S.reserve(size);
+        }
+        void push(T v) {
+            S.push_back(v);
+        }
+        T pop() {
+            T val = S.back();
+            S.pop_back();
+            return val;
+        }
+        T &topEl() {
+            return S.back();
+        }
+        bool isEmpty() {
+            return S.empty();
+        }
 };
 
 #endif
