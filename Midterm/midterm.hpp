@@ -16,7 +16,7 @@ class Student {
         Student(int i, string name, double *sc) {
             SID = i;
             Sname = name;
-            for(int j = 0; j<5; j++) {
+            for(int j = 0; j<5; j++) { // possible idea... prehave all 5 objects made in line 16 and then have it just run each object idv.
                 scores.push_back(j); //come back to this to figure out how to have all 5
                                      //Sstudent Objectyss be pushed
             }
@@ -30,9 +30,15 @@ class Student {
         vector<double> &getScores() {
             return scores;
         };
-        void setID();
-        void setName();
-        void setScores();
+        void setID(int ID) {
+            SID = ID;
+        }
+        void setName(string name) {
+            Sname = name;
+        }
+        void setScores(double *sc) {
+            //hmmmm maybe sstart on int main now
+        }
 };
 
 template <class T, int capacity = 30>
