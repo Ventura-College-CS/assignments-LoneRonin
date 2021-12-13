@@ -41,3 +41,17 @@ class Student {
             }
         };  
 };
+
+class Compare {
+    public:
+        int operator()(const int &lhs, const int &rhs) {
+            int lTotal, rTotal;
+            lTotal = lhs;
+            rTotal = rhs;
+            return lTotal < rTotal;
+        }
+};
+
+int main() {
+    
+}
