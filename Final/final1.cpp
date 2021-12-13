@@ -34,15 +34,17 @@ class Course {
 int BinSearch(int array[], int first, int last, int target) { // need to edit to impliment with objects
     int mid; // middle point of the search
 
-    if (first > last)
-        return -1;
-    mid = (first + last)/2;
-    if (array[mid] == target)
-        return mid;
-    if (array[mid] < target)
-        return binarySearch(array, mid + 1, last, target);
-    else
-        return binarySearch(array, first, mid - 1, target);
+    if (first <= last) {
+        mid = (first + last) / 2;
+
+        if (array[mid].getCId() == target)
+            return mid;
+        if (array[mid].getCId() < target)
+            return BinSearch(array, mid + 1, last, target);
+        if (array[mid].getCId() > target)
+            return BinSearch(array, first, mid - 1, target);
+    }
+    return -1;
 }  
 
 /*
