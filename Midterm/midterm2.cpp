@@ -25,7 +25,7 @@ class Student {
         string getName() {
             return Sname;
         }
-        vector<double> &getScores() {
+        vector<double> const &getScores() const {
             return scores;
         };
         void setID(int ID) {
@@ -56,11 +56,11 @@ class Compare {
                                                         //compares the sum of all the values of Student
             double lTotal = 0, rTotal = 0;
             vector<double> score;
-            score = lhs.getScore();
+            score = lhs.getScores();
             for (int i =0; i < score.size(); i++) {
                 lTotal += score[i];
             } 
-            score = rhs.getScore();
+            score = rhs.getScores();
             for (int i =0; i < score.size(); i++) {
                 rTotal += score[i];
             }
@@ -75,14 +75,17 @@ int main() {
     S1.setID(1001);
 	S1.setName("Takeo");
 	S1.setScores(87.0, 98.0, 100.0);
+    S1.print_S();
 
 	S2.setID(1002);
 	S2.setName("Thy");
 	S2.setScores(100.0, 100.0, 100.0);
+    S2.print_S();
 
 	S3.setID(1003);
 	S3.setName("Yuumi");
 	S3.setScores(100.0, 78.0, 65.0);
+    S3.print_S();
 
 //set up priority queue with object, data type, Commpare Class
     priority_queue<Student, vector<Student>, Compare> pq;
