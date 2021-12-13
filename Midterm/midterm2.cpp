@@ -70,8 +70,9 @@ int main() {
 	S3.setName("Yuumi");
 	S3.setScores(100.0, 78.0, 65.0);
 
-//set up priority queue
+//set up priority queue with object, data type, Commpare Class
     priority_queue<Student, vector<Student>, Compare> pq;
+    
 }
 
 //Create Student Objects with Id, Name, and 3 Scores
