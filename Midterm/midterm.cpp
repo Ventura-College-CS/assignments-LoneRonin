@@ -12,14 +12,14 @@ int main () {
 
     Student tmp;
     vector<double> C;
-   // Stack<Students, 10> CS;
+    Stack<Students, 10> CS;
 
-   //need to take informtion from the Class aand instead put it into a loop
+   //need to take informtion from the Class and instead put it into a loop
    for (int i = 0; i < 5; i++) {
-       s[i]setSID(i);
-       s[i]setSname(i);
-       s[i]setScores(i);
-       s[i]push(s[i]);
+       s[i].setID(i);
+       s[i].setName(name[i]);
+       s[i].setScores(scores[i]);
+       CS.push(s[i]);
    }
    //something wrong but too tired to continue
     
