@@ -46,6 +46,8 @@ class Course {
                     swap(&array[i], &array[j]);
                 }
             }
+            swap(&array[i + 1], &array[last]);
+            return (i + 1);
         }
         void QSort(int C[], int first, int last) {
 
