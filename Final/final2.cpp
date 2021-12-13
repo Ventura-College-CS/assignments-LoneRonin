@@ -30,6 +30,16 @@ class Course {
         void setCCred(int cred) {
             cCred = cred;
         }
+
+        void swap(int *A, int *B) {
+
+        }
+        int partition(int C[], int first, int last) {
+
+        }
+        void QSort(int C[], int first, int last) {
+            
+        }
 };
 
 int main() {
