@@ -16,7 +16,7 @@ class Student {
             for(int j = 0; j<5; j++) { // possible idea... prehave all 5 objects made in line 16 and then have it just run each object idv.
                 scores.push_back(j); //come back to this to figure out how to have all 5
                                      //Sstudent Objectyss be pushed
-            }
+            }//thinking about it, I think this is fine
         }
         int getID() {
             return SID;
@@ -65,10 +65,10 @@ int main () {
    for (int i = 0; i < 5; i++) {
         tmp = CS.pop();
         C = tmp.getScores(); 
-        cout << tmp.getID() << " " << tmp.getName() << endl;
+        cout << " ID: " << tmp.getID() << " Name : " << tmp.getName() << endl;
 
-        for (int j = 0; j < C.size(); j++) {
-            cout << C[j] << endl;
+        for (int j = 0; j < 3; j++) {
+            cout << " Score : " << C[j] << endl;
         }
    }
     
