@@ -36,7 +36,7 @@ class Student {
         }
         void setScores(double *sc) {
             scores.clear();
-            for (int i = 0; i < 5; i++) {
+            for (int i = 0; i < 3; i++) {
                 scores.push_back(sc[i]);
             }
         };  
@@ -54,5 +54,15 @@ class Compare {
 };
 
 int main() {
+    Student s[3]; //Array of Class Students being initialized
+    string name[] = {"Takeo", "Thy", "Yuumi"}; //Array filled with nammes
+    double scores[3][5] = {
+        {87.0, 98.0, 100.0}, {100.0, 78.0, 65.0}, {100.0, 100.0, 100.0}
+    };
     
 }
+
+//Create Student Objects with Id, Name, and 3 Scores
+//Create the priority queue with object, data type, Commpare Class
+//Push eacah student into the queue
+//Print and pop top stuident
