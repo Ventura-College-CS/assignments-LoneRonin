@@ -73,4 +73,7 @@ int main() {
 
     int n = sizeof(c)/sizeof(c[0]);
     
+    QSort(C, 0, n - 1);
+    for (int i = 0; i < n; i++)
+        cout << i + 1 << ": " << C[i] << endl;
 }
