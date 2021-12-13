@@ -52,9 +52,9 @@ class Student {
 
 class Compare {
     public:
-        int operator()(const int &lhs, const int &rhs) {//Still need to change this so that it
+        int operator()(const Student &lhs, const Student &rhs) {//Still need to change this so that it
                                                         //compares the sum of all the values of Student
-            double lTotal, rTotal;
+            double lTotal = 0, rTotal = 0;
             vector<double> score;
             score = lhs.getScore();
             for (int i =0; i < score.size(); i++) {
