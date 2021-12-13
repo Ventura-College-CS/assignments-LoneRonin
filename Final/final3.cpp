@@ -3,7 +3,7 @@
 #include <queue>
 using namespace std;
 
-class PostfixExp
+class Postfix
 {
 private:
     string expression;
@@ -11,10 +11,10 @@ private:
     int calculate(int, int, char);
 
 public:
-    PostfixExp();
-    PostfixExp(string);
-    void setExpression(string);
-    void printExpression() const;
+    Postfix();
+    Postfix(string);
+    void setExp(string);
+    void printExp() const;
     int Evaluation();
 };
 
@@ -46,3 +46,29 @@ public:
         return pool.back();
     }
 };
+
+int eval() {
+    int result;
+    switch () {
+        case '+':
+            break;
+        case '-':
+            break;
+        case '*':
+            break;
+        case '/':
+            break;
+        default:
+            cout << "Operator Error" << endl;
+            exit(0);
+    }
+    return result;
+}
+
+int ops() {
+
+}
+
+int main() {
+
+}
