@@ -60,7 +60,12 @@ int eval(int num1; int num2; char op) {
             result = num1 * num2;
             break;
         case '/':
-            result = num1 / num2;
+            if(num1 == 0) {
+                cout << "Cannot Divide by Zero" << endl;
+                exit(0)
+            }   
+            else    
+                result = num1 / num2;
             break;
         default:
             cout << "Operator Error" << endl;
@@ -99,13 +104,25 @@ int main() {
 		else if (isOp(input))
 		{
 			if (stack.size() < 2) {
-                cout << "Error Insufficient Operands" << endl;
-                exit(0)
+                cout << "Error: Insufficient Operands" << endl;
+                exit(0);
             }
             else {
-
+                num1 = stack.pop();
+                num2 = stack.pop();
+                result = eval(num1, num2, input);
+                stack.push(result);
             }
 		}
+        else {
+            cout << "Error: Invalid Input" << endl;
+            exit(0);
+        }
 	}
-	cout << "The result of the expression is " << stack.pop() << endl;
+    if (stack.size() > 1) {
+        cout << "Error: Too Many Operands"
+        exit(0);
+    }
+    else
+        cout << "The result of the expression is " << stack.pop() << endl;
 }
