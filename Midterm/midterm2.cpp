@@ -41,6 +41,9 @@ class Student {
             scores.push_back(S3);
         };  
         //Set up print function to show all info for an object
+        void print_S() {
+
+        };
 };
 
 class Compare {
@@ -72,7 +75,16 @@ int main() {
 
 //set up priority queue with object, data type, Commpare Class
     priority_queue<Student, vector<Student>, Compare> pq;
-    
+
+    pq.push(S1);
+    pq.push(S2);
+    pq.push(S3);
+
+    while (!pq.empty()) {
+        pop_S = pq.top();
+        pop_S.print_S();
+        pq.pop();
+    }
 }
 
 //Create Student Objects with Id, Name, and 3 Scores
