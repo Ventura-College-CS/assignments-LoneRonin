@@ -41,4 +41,13 @@ int main() {
     "Calculus", "Physics", "Literature", "Communication"};
     int Credits[10] = {6, 4, 5, 3, 2, 5, 4, 4, 3, 3};
 
+    for (int i = 0; i < 10; i++) {
+        C[i].setCId(i + 100);
+        C[i].setCName(classes[i]);
+        C[i].setCCred(Credits[i]);
+    }
+    //temp test loop
+    for (int i = 0; i < 10; i++) {
+        cout << "ID: " << C[i].getCId << " Class: " << C[i].getCName << " Credits: " << C[i].getCCred;
+    }
 }
