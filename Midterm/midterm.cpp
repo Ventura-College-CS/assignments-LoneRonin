@@ -62,6 +62,7 @@ int main () {
    }
    
    //need to print out information 
+   // takes eaach piece of info of aan object and placess it into tmp for it to then be all printed out at once
    for (int i = 0; i < 5; i++) {
         tmp = CS.pop();
         C = tmp.getScores(); 
