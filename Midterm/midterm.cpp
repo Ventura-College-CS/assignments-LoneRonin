@@ -55,7 +55,7 @@ int main () {
 
    //need to take informtion from the Class and instead put it into a loop
    for (int i = 0; i < 5; i++) {
-       s[i].setID(i);
+       s[i].setID(i + 1000);
        s[i].setName(name[i]);
        s[i].setScores(scores[i]);
        CS.push(s[i]);
