@@ -42,7 +42,11 @@ class Student {
         };  
         //Set up print function to show all info for an object
         void print_S() {
+            cout << " ID: " << SID << " Name : " << Sname << endl;
 
+            for (int j = 0; j < 3; j++) {
+                cout << " Score : " << scores[j] << endl;
+            }
         };
 };
 
