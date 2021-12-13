@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <queue>
+#include <stack>
 using namespace std;
 
 class Postfix
@@ -47,25 +48,25 @@ public:
     }
 };
 
-int eval(int num1; int num2; char op) {
+int eval(int num1, int num2, char op) {
     int result;
     switch (op) {
         case '+':
-            result = num1 + num2;
+            result = num2 + num1;
             break;
         case '-':
-            result = num1 - num2;
+            result = num2 - num1;
             break;
         case '*':
-            result = num1 * num2;
+            result = num2 * num1;
             break;
         case '/':
             if(num1 == 0) {
                 cout << "Cannot Divide by Zero" << endl;
-                exit(0)
-            }   
-            else    
-                result = num1 / num2;
+                exit(0);
+            }
+            else
+                result = num2 / num1;
             break;
         default:
             cout << "Operator Error" << endl;
@@ -74,8 +75,8 @@ int eval(int num1; int num2; char op) {
     return result;
 }
 
-int isOp() {
-    switch () {
+int isOp(char op) {
+    switch (op) {
         case '+':
         case '-':
         case '*':
@@ -89,40 +90,40 @@ int isOp() {
 int main() {
     const int offSet = 48;
     Stack<int, 30> stack;
-	char input;
+    char input;
     string postExp;
     cout << "Enter a postfix expression:";
     cin >> postExp;
 
-	int num1, num2, result;
+    int num1, num2, result;
 
-	for (int i = 0; i < postExp.size(); i++)
-	{
-		input = postExp[i];
-		if (isdigit(input))
-			stack.push(int(input) - offSet);
-		else if (isOp(input))
-		{
-			if (stack.size() < 2) {
+    for (int i = 0; i < postExp.size(); i++)
+    {
+        input = postExp[i];
+        if (isdigit(input))
+            stack.push(int(input) - offSet);
+        else if (isOp(input))
+        {
+            /*if (stack.size() < 2) {
                 cout << "Error: Insufficient Operands" << endl;
                 exit(0);
             }
-            else {
+            else {*/
                 num1 = stack.pop();
                 num2 = stack.pop();
                 result = eval(num1, num2, input);
                 stack.push(result);
-            }
-		}
+            //}
+        }
         else {
             cout << "Error: Invalid Input" << endl;
             exit(0);
         }
-	}
-    if (stack.size() > 1) {
-        cout << "Error: Too Many Operands"
-        exit(0);
     }
-    else
-        cout << "The result of the expression is " << stack.pop() << endl;
+    /*if (stack.size() > 1) {
+        cout << "Error: Too Many Operands" << endl;
+        exit(0);
+    }*/
+    //else
+        cout << "The result of the expression is " << result << endl;
 }
