@@ -14,7 +14,7 @@ class Student {
         Student(int i, string name, double *sc) {
             SID = i;
             Sname = name;
-            for(int j = 0; j<5; j++) { // possible idea... prehave all 5 objects made in line 16 and then have it just run each object idv.
+            for(int j = 0; j<3; j++) { // possible idea... prehave all 5 objects made in line 16 and then have it just run each object idv.
                 scores.push_back(j); //come back to this to figure out how to have all 5
                                      //Sstudent Objectyss be pushed
             }//thinking about it, I think this is fine
@@ -44,8 +44,9 @@ class Student {
 
 class Compare {
     public:
-        int operator()(const int &lhs, const int &rhs) {
-            int lTotal, rTotal;
+        int operator()(const int &lhs, const int &rhs) {//Still need to change this so that it
+                                                        //compares the sum of all the values of Student
+            double lTotal, rTotal;
             lTotal = lhs;
             rTotal = rhs;
             return lTotal < rTotal;
