@@ -47,16 +47,20 @@ public:
     }
 };
 
-int eval() {
+int eval(int a; int b; char op) {
     int result;
-    switch () {
+    switch (op) {
         case '+':
+            result = a + b;
             break;
         case '-':
+            result = a - b;
             break;
         case '*':
+            result = a * b;
             break;
         case '/':
+            result = a / b;
             break;
         default:
             cout << "Operator Error" << endl;
@@ -65,10 +69,36 @@ int eval() {
     return result;
 }
 
-int ops() {
-
+int isOp() {
+    switch () {
+        case '+':
+        case '-':
+        case '*':
+        case '/':
+            return 1;
+        default:
+            return 0;
+    }
 }
 
 int main() {
+    Stack<int, N> stack;
+	char input;
 
+	int opr1, opr2, result;
+
+	for (int i = 0; i < postfix_exp.size(); i++)
+	{
+		input = postfix_exp[i];
+		if (isdigit(input))
+			stack.push(int(input) - offset);
+		else if (isOperator(input))
+		{
+			opr1 = stack.pop();
+			opr2 = stack.pop();
+			result = evaluate(opr1, opr2, input);
+			stack.push(result);
+		}
+	}
+	cout << "The result of the expression is " << stack.pop() << endl;
 }
