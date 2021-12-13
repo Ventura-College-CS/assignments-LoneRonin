@@ -58,11 +58,11 @@ class Compare {
             vector<double> score;
             score = lhs.getScore();
             for (int i =0; i < score.size(); i++) {
-
+                lTotal += score[i];
             } 
             score = rhs.getScore();
             for (int i =0; i < score.size(); i++) {
-
+                rTotal += score[i];
             }
             return lTotal < rTotal;
         }
