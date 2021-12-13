@@ -34,11 +34,11 @@ class Student {
         void setName(string name) {
             Sname = name;
         }
-        void setScores(double *sc) {
+        void setScores(double S1, double S2, double S3) {
             scores.clear();
-            for (int i = 0; i < 3; i++) {
-                scores.push_back(sc[i]);
-            }
+            scores.push_back(S1);
+            scores.push_back(S2);
+            scores.push_back(S3);
         };  
 };
 
@@ -54,12 +54,19 @@ class Compare {
 };
 
 int main() {
-    Student s[3]; //Array of Class Students being initialized
-    string name[] = {"Takeo", "Thy", "Yuumi"}; //Array filled with nammes
-    double scores[3][5] = {
-        {87.0, 98.0, 100.0}, {100.0, 78.0, 65.0}, {100.0, 100.0, 100.0}
-    };
-    
+    Student S1, S2, S3, pop_S;
+
+    S1.setID(1001);
+	S1.setName("Takeo");
+	S1.setScores(87.0, 98.0, 100.0);
+
+	S2.setID(1002);
+	S2.setName("Thy");
+	S2.setScores(100.0, 100.0, 100.0);
+
+	S3.setID(1003);
+	S3.setName("Yuumi");
+	S3.setScores(100.0, 78.0, 65.0);
 }
 
 //Create Student Objects with Id, Name, and 3 Scores
