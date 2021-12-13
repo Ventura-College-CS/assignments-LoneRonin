@@ -63,7 +63,7 @@ int main () {
    //need to print out information 
    for (int i = 0; i < 5; i++) {
         tmp = CS.pop();
-        CS = tmp.getScores(); //Something wrong with getter for scores
+        C = tmp.getScores(); 
         cout << tmp.getID() << " " << tmp.getName() << endl;
 
         for (int j = 0; j < C.size(); j++) {
