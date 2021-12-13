@@ -67,21 +67,23 @@ int main() {
         C[i].setCCred(Credits[i]);
     }
 
-    // Now to create the Binary search part and the print results part
-
     int target = 0;
 
     cout << "Enter 0-9 to Search a Course Id: ";
     cin >> target;
 
+    int n = sizeof(array)/sizeof(array[0]);
+    int first = 0, last = n - 1;
     int result = BinSearch(array, first, last, target);
 
     if (result <= 9 || result == 0) {
-        
+        cout << "Course Name: " << array[target].getCName() << endl;
+        cout << "Course Id: V0" << array[target].getCId() << endl;
+        cout << "Course Credits: " << array[target].getCCred() << endl;
+    }
+    else {
+        cout << "No Course with that Id Found";
     }
 
-    /*temp test loop
-    for (int i = 0; i < 10; i++) {
-        cout << "ID: " << C[i].getCId() << " Class: " << C[i].getCName() << " Credits: " << C[i].getCCred() << endl;
-    }*/
+    return 0;
 }
