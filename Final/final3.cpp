@@ -47,20 +47,20 @@ public:
     }
 };
 
-int eval(int a; int b; char op) {
+int eval(int num1; int num2; char op) {
     int result;
     switch (op) {
         case '+':
-            result = a + b;
+            result = num1 + num2;
             break;
         case '-':
-            result = a - b;
+            result = num1 - num2;
             break;
         case '*':
-            result = a * b;
+            result = num1 * num2;
             break;
         case '/':
-            result = a / b;
+            result = num1 / num2;
             break;
         default:
             cout << "Operator Error" << endl;
@@ -82,22 +82,29 @@ int isOp() {
 }
 
 int main() {
-    Stack<int, N> stack;
+    const int offSet = 48;
+    Stack<int, 30> stack;
 	char input;
+    string postExp;
+    cout << "Enter a postfix expression:";
+    cin >> postExp;
 
-	int opr1, opr2, result;
+	int num1, num2, result;
 
-	for (int i = 0; i < postfix_exp.size(); i++)
+	for (int i = 0; i < postExp.size(); i++)
 	{
-		input = postfix_exp[i];
+		input = postExp[i];
 		if (isdigit(input))
-			stack.push(int(input) - offset);
-		else if (isOperator(input))
+			stack.push(int(input) - offSet);
+		else if (isOp(input))
 		{
-			opr1 = stack.pop();
-			opr2 = stack.pop();
-			result = evaluate(opr1, opr2, input);
-			stack.push(result);
+			if (stack.size() < 2) {
+                cout << "Error Insufficient Operands" << endl;
+                exit(0)
+            }
+            else {
+
+            }
 		}
 	}
 	cout << "The result of the expression is " << stack.pop() << endl;
