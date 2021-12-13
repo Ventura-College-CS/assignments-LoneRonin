@@ -41,12 +41,12 @@ class Course {
             int i = (first - 1);
 
             for (int j = first; j <+ last - 1; j++) {
-                if (array[j] <= pivot) {
+                if (C[j] <= pivot) {
                     i++;
-                    swap(&array[i], &array[j]);
+                    swap(&C[i], &C[j]);
                 }
             }
-            swap(&array[i + 1], &array[last]);
+            swap(&C[i + 1], &C[last]);
             return (i + 1);
         }
         void QSort(int C[], int first, int last) {
