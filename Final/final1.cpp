@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 Class Course {
@@ -31,9 +32,13 @@ Class Course {
 };
 
 int BinSearch() {
-    
+
 }
 
 int main() {
+    Course C[10];
+    string classes[] = {"Chemistry", "Algebra", "English", "Geometry", "Geography", "Biology",
+    "Calculus", "Physics", "Literature", "Communication"};
+    int Credits[10] = {6, 4, 5, 3, 2, 5, 4, 4, 3, 3};
 
 }
