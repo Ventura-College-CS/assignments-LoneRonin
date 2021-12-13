@@ -38,6 +38,7 @@ class Student {
             for (int i = 0; i < 5; i++) {
                 scores.push_back(sc[i]);
             }
+        };  
 };
 
 int main () {
@@ -71,9 +72,4 @@ int main () {
         }
    }
     
-}
-//Needs to do for main
-// initialize student array
-// double array for scores
-// push each sstudents info into queue
-// pop and print all info
+};
