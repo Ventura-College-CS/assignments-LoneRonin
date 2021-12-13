@@ -50,7 +50,12 @@ class Course {
             return (i + 1);
         }
         void QSort(int C[], int first, int last) {
+            if (first < last) {
+                int pivot = partition(C, first, last);
 
+                QSort(C, first, pivot - 1);
+                QSort(C, pivot + 1, last);
+            }
         }
 };
 
