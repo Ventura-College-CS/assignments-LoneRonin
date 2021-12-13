@@ -8,7 +8,7 @@ class Course {
         string cName;
         int cCred;
     public:
-        Course() : cID(0), cName(), cCred() {
+        Course() : cId(0), cName(), cCred() {
 
         }
         int getCId() const {
@@ -31,18 +31,18 @@ class Course {
         }
 };
 
-int BinSearch(int array[], int first, int last, int target) { // need to edit to impliment with objects
+int BinSearch(Course C[], int first, int last, int target) { // need to edit to impliment with objects
     int mid; // middle point of the search
 
     if (first <= last) {
         mid = (first + last) / 2;
 
-        if (array[mid].getCId() == target)
+        if (C[mid].getCId() == target)
             return mid;
-        if (array[mid].getCId() < target)
-            return BinSearch(array, mid + 1, last, target);
-        if (array[mid].getCId() > target)
-            return BinSearch(array, first, mid - 1, target);
+        if (C[mid].getCId() < target)
+            return BinSearch(C, mid + 1, last, target);
+        if (C[mid].getCId() > target)
+            return BinSearch(C, first, mid - 1, target);
     }
     return -1;
 }  
@@ -74,14 +74,14 @@ int main() {
     cout << "Enter 0-9 to Search a Course Id: ";
     cin >> target;
 
-    int n = sizeof(array)/sizeof(array[0]);
+    int n = sizeof(c)/sizeof(c[0]);
     int first = 0, last = n - 1;
-    int result = BinSearch(array, first, last, target);
+    int result = BinSearch(c, first, last, target);
 
     if (result <= 9 || result == 0) {
-        cout << "Course Name: " << array[target].getCName() << endl;
-        cout << "Course Id: V0" << array[target].getCId() << endl;
-        cout << "Course Credits: " << array[target].getCCred() << endl;
+        cout << "Course Name: " << c[target].getCName() << endl;
+        cout << "Course Id: V0" << c[target].getCId() << endl;
+        cout << "Course Credits: " << c[target].getCCred() << endl;
     }
     else {
         cout << "No Course with that Id Found";
