@@ -104,26 +104,26 @@ int main() {
             stack.push(int(input) - offSet);
         else if (isOp(input))
         {
-            /*if (stack.size() < 2) {
+            if (stack.size() < 2) {
                 cout << "Error: Insufficient Operands" << endl;
                 exit(0);
             }
-            else {*/
+            else {
                 num1 = stack.pop();
                 num2 = stack.pop();
                 result = eval(num1, num2, input);
                 stack.push(result);
-            //}
+            }
         }
         else {
             cout << "Error: Invalid Input" << endl;
             exit(0);
         }
     }
-    /*if (stack.size() > 1) {
+    if (stack.size() > 1) {
         cout << "Error: Too Many Operands" << endl;
         exit(0);
-    }*/
-    //else
+    }
+    else
         cout << "The result of the expression is " << result << endl;
 }
