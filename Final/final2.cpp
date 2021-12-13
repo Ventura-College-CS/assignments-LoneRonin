@@ -32,13 +32,23 @@ class Course {
         }
 
         void swap(int *A, int *B) {
-
+            int x = *a;
+            *a = *b;
+            *b = x;
         }
         int partition(int C[], int first, int last) {
+            int pivot = C[last];
+            int i = (first - 1);
 
+            for (int j = first; j <+ last - 1; j++) {
+                if (array[j] <= pivot) {
+                    i++;
+                    swap(&array[i], &array[j]);
+                }
+            }
         }
         void QSort(int C[], int first, int last) {
-            
+
         }
 };
 
