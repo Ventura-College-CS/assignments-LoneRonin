@@ -74,14 +74,14 @@ int main() {
     cout << "Enter 0-9 to Search a Course Id: ";
     cin >> target;
 
-    int n = sizeof(c)/sizeof(c[0]);
+    int n = sizeof(C)/sizeof(C[0]);
     int first = 0, last = n - 1;
-    int result = BinSearch(c, first, last, target);
+    int result = BinSearch(C, first, last, target);
 
     if (result <= 9 || result == 0) {
-        cout << "Course Name: " << c[target].getCName() << endl;
-        cout << "Course Id: V0" << c[target].getCId() << endl;
-        cout << "Course Credits: " << c[target].getCCred() << endl;
+        cout << "Course Name: " << C[target].getCName() << endl;
+        cout << "Course Id: V0" << C[target].getCId() << endl;
+        cout << "Course Credits: " << C[target].getCCred() << endl;
     }
     else {
         cout << "No Course with that Id Found";
