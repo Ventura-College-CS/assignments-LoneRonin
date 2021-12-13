@@ -67,7 +67,7 @@ int main () {
         C = tmp.getScores(); 
         cout << " ID: " << tmp.getID() << " Name : " << tmp.getName() << endl;
 
-        for (int j = 0; j < 3; j++) {
+        for (int j = 0; j < C.size(); j++) {
             cout << " Score : " << C[j] << endl;
         }
    }
