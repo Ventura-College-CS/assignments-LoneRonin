@@ -34,7 +34,6 @@ class Student {
             Sname = name;
         }
         void setScores(double *sc) {
-            //hmmmm maybe sstart on int main now
             scores.clear();
             for (int i = 0; i < 5; i++) {
                 scores.push_back(sc[i]);
@@ -45,7 +44,8 @@ int main () {
     Student s[5]; //Array of Class Students being initialized
     string name[] = {"Takeo", "Thy", "Yuumi", "Haru", "Irelia"}; //Array filled with nammes
     double scores[5][5] = {
-        {87.0, 98.0, 100.0}, {100.0, 78.0, 65.0}, {100.0, 100.0, 100.0}, {83.0, 90.0, 60.0},{92.0, 86.0, 100.0}
+        {87.0, 98.0, 100.0}, {100.0, 78.0, 65.0}, {100.0, 100.0, 100.0},
+            {83.0, 90.0, 60.0},{92.0, 86.0, 100.0}
     };
 
     Student tmp;
@@ -59,7 +59,17 @@ int main () {
        s[i].setScores(scores[i]);
        CS.push(s[i]);
    }
-   //something wrong but too tired to continue
+   
+   //need to print out information 
+   for (int i = 0; i < 5; i++) {
+        tmp = CS.pop();
+        CS = tmp.getScores(); //Something wrong with getter for scores
+        cout << tmp.getID() << " " << tmp.getName() << endl;
+
+        for (int j = 0; j < C.size(); j++) {
+            cout << C[j] << endl;
+        }
+   }
     
 }
 //Needs to do for main
